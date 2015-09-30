@@ -1,0 +1,20 @@
+{
+  "name": "phone repair tracking",
+  "version": "0.0.0",
+  "authors": [
+    "Moncef12 <hasseinbey@gmail.com>"
+  ],
+  "description": "talk demo app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.6",
+    "jquery": "~2.1.4"
+  }
+}
