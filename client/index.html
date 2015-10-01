@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="phoneRepairTracking">
+<head >
+    <meta charset="UTF-8">
+    <title>Phone Repair Tracking AngularJS</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body ng-controller="phoneListCtrl">
+    <table class="table">
+        <th>Référence</th>
+        <th>Marque</th>
+        <th>Progression</th>
+        <th>Image</th>
+        <th>Actions</th>
+        <tr ng-repeat="phone in phones">
+            <td>{{phone.name}}</td>
+            <td>{{phone.manufacture}}</td>
+            <td>{{phone.progress + ' %'}}</td>
+            <td><img ng-src="{{phone.image}}" alt=""/> {{phone.imgage}}</td>
+            <td>
+                <a  class="btn btn-danger btn-sm" ng-click="remove(phone)" href="#">Supprimé</a>
+                <a class="btn btn-success btn-sm" ng-click="markAsRepaired(phone)" href="#">Ok</a>
+            </td>
+        </tr>
+    </table>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
