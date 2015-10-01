@@ -1,13 +1,15 @@
 var app = angular.module('phoneRepairTracking', []);
 
 
-app.controller('phoneListCtrl', function($scope){
-    $scope.phones = [
-        {"name":"s3 galaxy", "manufacture":"samsung", "imgage":"", "problem":"battery not working", "progress":60},
-        {"name":"iphone 6", "manufacture":"apple", "imgage":"", "problem": "facebook app not installed !! big deal", "progress":0},
-        {"name":"ipad", "manufacture":"apple", "imgage":"", "problem": "damaged screen", "progress":100},
-        {"name":"s3 galaxy", "manufacture":"nokia", "imgage":"", "problem": "damaged screen", "progress":100},
-    ];
+// $http sera injecté.
+// cette injection est une injection implicite.
+app.controller('phoneListCtrl', function($scope, $http){
+
+    // $http est un service qui permet de faire
+    // requetes http, et il retourne des promises.
+    $http.get('data/phones.json').then(function (response) {
+        $scope.phones = response.data;
+    })
 
     $scope.remove = function (phone) {
         $scope.phones.splice($scope.phones.indexOf(phone), 1);
