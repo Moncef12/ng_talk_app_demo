@@ -6,23 +6,33 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
 <body ng-controller="phoneListCtrl">
+
     <table class="table">
         <th>Référence</th>
         <th>Marque</th>
+        <th>Problem</th>
+<!--        <th>Etat</th>-->
         <th>Progression</th>
         <th>Image</th>
+        <th>Date d'entrée</th>
         <th>Actions</th>
-        <tr ng-repeat="phone in phones">
+        <tr ng-repeat="phone in phones" ng-class="{'success':phone.progress ===100}">
             <td>{{phone.name}}</td>
             <td>{{phone.manufacture}}</td>
-            <td>{{phone.progress + ' %'}}</td>
-            <td><img ng-src="{{phone.image}}" alt=""/> {{phone.imgage}}</td>
+            <td>{{phone.problem}}</td>
+<!--            <td>{{phone.state | state}}</td>-->
             <td>
-                <a  class="btn btn-danger btn-sm" ng-click="remove(phone)" href="#">Supprimé</a>
-                <a class="btn btn-success btn-sm" ng-click="markAsRepaired(phone)" href="#">Ok</a>
+                <rt-progress-bar text="Fait" percentage="phone.progress"></rt-progress-bar>
+            </td>
+            <td><img ng-src="{{phone.image}}" alt=""/> {{phone.imgage}}</td>
+            <td>{{phone.date_in}}</td>
+            <td>
+                <a  class="btn btn-danger btn-sm" ng-click="remove(phone)" href="#">Non réparable</a>
+                <a class="btn btn-success btn-sm" ng-click="markAsRepaired(phone)" href="#">Réparé</a>
             </td>
         </tr>
     </table>
+
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="app/app.js"></script>
 </body>
