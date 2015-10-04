@@ -16,7 +16,6 @@ bower install
 
 # Tests
  
-### > Launch Karma 
 ```
 Karma start
 ```
