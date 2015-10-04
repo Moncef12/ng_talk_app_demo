@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary">+ Ajouter</button>
+    </div>
+</div>
+<div class="row buffer-top">
+    <div class="col-md-12"></div>
+    <table class="table">
+        <th>Référence</th>
+        <th>Marque</th>
+        <th>Problem</th>
+        <th>Etat</th>
+        <th>Progression</th>
+        <th>Image</th>
+        <th>Date d'entrée</th>
+        <th>Actions</th>
+        <tr>
+            <td><input type="text" ng-model="nameSearch"/></td>
+            <td><input type="text" ng-model="marqueSearch"/></td>
+            <td><input type="text" ng-model="problemSearch"/></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="phone in phones | filter:{problem: problemSearch, name: nameSearch, manufacture: marqueSearch}" ng-class="{'success':phone.state=== 1, 'danger':phone.state === 2}">
+            <td>{{phone.name}}</td>
+            <td>{{phone.manufacture}}</td>
+            <td>{{phone.problem}}</td>
+            <td>{{phone.state | state}}</td>
+            <td>
+                <rt-progress-bar text="Fait" percentage="phone.progress"></rt-progress-bar>
+            </td>
+            <td><img ng-src="{{phone.image}}" alt=""/> {{phone.imgage}}</td>
+            <td>{{phone.date_in}}</td>
+            <td>
+                <button ng-class="{'disabled':traited(phone)}"   class="btn btn-danger btn-sm" ng-click="markAsUnrepared(phone)" href="#">Non réparable</button>
+                <button ng-class="{'disabled':traited(phone)}"   class="btn btn-success btn-sm" ng-click="markAsRepaired(phone)" href="#">Réparé</button>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+

@@ -1,10 +1,14 @@
 {
-  "name": "phone repair tracking",
+  "name": "ng-demos",
   "version": "0.0.0",
   "authors": [
     "Moncef12 <hasseinbey@gmail.com>"
   ],
-  "description": "talk demo app",
+  "description": "first session talk",
+  "keywords": [
+    "algiers",
+    "meetup"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,6 +19,8 @@
   ],
   "dependencies": {
     "angular": "angularjs#~1.4.6",
+    "angular-mocks": "~1.4.7",
+    "angular-route": "~1.4.7",
     "bootstrap": "~3.3.5",
     "jquery": "~2.1.4"
   }

@@ -1,6 +1,6 @@
 [
-  {"name":"s3 galaxy", "manufacture":"samsung", "imgage":"", "problem":"battery not working", "progress":60, "date_in":"12-09-2015" },
-  {"name":"iphone 6", "manufacture":"apple", "imgage":"", "problem": "facebook app not installed !! big deal", "progress":0, "date_in":"30-09-2015"},
-  {"name":"ipad", "manufacture":"apple", "imgage":"", "problem": "damaged screen", "progress":100, "date_in":"01-09-2015"},
-  {"name":"s3 galaxy", "manufacture":"nokia", "imgage":"", "problem": "damaged screen", "progress":100, "date_in":"01-09-2015"}
+  {"name":"s3 galaxy", "manufacture":"samsung", "imgage":"", "problem":"battery not working", "progress":60, "date_in":"12-09-2015", "state":0},
+  {"name":"iphone 6", "manufacture":"apple", "imgage":"", "problem": "facebook app not installed !! big deal", "progress":0, "date_in":"30-09-2015", "state":0},
+  {"name":"ipad", "manufacture":"apple", "imgage":"", "problem": "damaged screen", "progress":100, "date_in":"01-09-2015", "state":2},
+  {"name":"s3 galaxy", "manufacture":"nokia", "imgage":"", "problem": "damaged screen", "progress":100, "date_in":"01-09-2015", "state":2}
 ]
