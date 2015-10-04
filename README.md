@@ -14,6 +14,14 @@ npm install
 bower install
 ```
 
+# Gulp tasks : 
+
+```
+gulp watch (will run build-js, partials each time a change is made)
+gulp build-js
+gulp partials (this will publish templates .html from app/ to partial/ )
+```
+
 # Tests
  
 ```
