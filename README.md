@@ -28,4 +28,4 @@ gulp partials (this will publish templates .html from app/ to partial/ )
 Karma start
 ```
 
-This will run tests, and, watch for further source/tests changes.
+This will run tests, and, watch for further app files/tests changes.
