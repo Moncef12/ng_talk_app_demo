@@ -22,7 +22,7 @@ gulp build-js
 gulp partials (this will publish templates .html from app/ to partial/ )
 ```
 
-# Tests
+# Tests :
  
 ```
 Karma start
